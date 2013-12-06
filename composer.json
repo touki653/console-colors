@@ -1,0 +1,19 @@
+{
+    "name": "touki/console-colors",
+    "description": "Console Colors playground",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Touki",
+            "email": "g.vincendon@vithemis.com"
+        }
+    ],
+    "require": {
+    },
+
+    "autoload": {
+        "psr-0": {
+            "Touki\\ConsoleColors": [ "src" ]
+        }
+    }
+}
