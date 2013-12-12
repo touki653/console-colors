@@ -42,6 +42,7 @@ Please note that `Color\Light` and `Color\Color` have a special behaviour specif
 ```php
 <?php
 
+use Touki\ConsoleColors\Formatter;
 use Touki\ConsoleColors\Color;
 use Touki\ConsoleColors\Style;
 
@@ -64,9 +65,10 @@ echo $formatter->format('foobar', new Color\Red, new Color\Blue, new Style\Bold)
 
 The `Color\Light` color needs a `ColorInterface` as a constructor parameter. (Cannot be combined with himself)
 
-```
+```php
 <?php
 
+use Touki\ConsoleColors\Formatter;
 use Touki\ConsoleColors\Color;
 use Touki\ConsoleColors\Style;
 
