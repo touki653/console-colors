@@ -39,6 +39,8 @@ function format($string, ColorInterface $foreground, ColorInterface $background 
 For choosing a `Touki\ConsoleColors\ColorInterface` you can pick any in [the list of predefined](https://github.com/touki653/console-colors/tree/master/src/Touki/ConsoleColors/Color) ones.  
 Please note that `Color\Light` and `Color\Color` have a special behaviour specified below.
 
+The same goes for a `Touki\ConsoleColors\StyleInterface`. You can pick any in the [list of predefined](https://github.com/touki653/console-colors/tree/master/src/Touki/ConsoleColors/Style) ones.
+
 ```php
 <?php
 
