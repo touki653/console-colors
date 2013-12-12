@@ -1,7 +1,6 @@
 # PHP Command Line Colors
 
-This library is just a for-fun-playground to use colors in an UNIX console.  
-It's object oriented
+This library is just a for-fun-playground to use colors in an UNIX console, the object oriented way.
 
 ## Installation
 
