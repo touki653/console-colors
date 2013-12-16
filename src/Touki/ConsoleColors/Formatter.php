@@ -13,6 +13,50 @@ use Touki\ConsoleColors\Style;
 class Formatter
 {
     /**
+     * A Colorset palette
+     * @var Palette
+     */
+    protected $palette;
+
+    /**
+     * Constructor
+     *
+     * @param Palette $palette A Colorset Palette
+     */
+    public function __construct(Palette $palette = null)
+    {
+        $this->palette = $palette ?: new DefaultPalette;
+    }
+
+    /**
+     * Formats a string from a name given in palette
+     *
+     * @param string $string String to format
+     * @param string $name   Name of the colorset
+     *
+     * @return string Formatted string
+     */
+    public function fromName($string, $name)
+    {
+        $colorset = $this->palette->get($name);
+
+        return $this->fromColorset($string, $colorset);
+    }
+
+    /**
+     * Formats from colorset
+     *
+     * @param string   $string   String to format
+     * @param ColorSet $colorset A Colorset
+     *
+     * @return string Formatted string
+     */
+    public function fromColorset($string, ColorSet $colorset)
+    {
+        return $this->format($string, $colorset->getForeground(), $colorset->getBackground(), $colorset->getStyle());
+    }
+
+    /**
      * Formats colors into a string
      *
      * @param string         $string     String to format
