@@ -27,7 +27,7 @@ class Formatter
         $style      = $style      ?: new Style\None;
         $background = $background ?: new Color\None;
 
-        $front = sprintf("\033[%d;%dm", $foreground->getValue(), $style->getVariation());
+        $front = sprintf("\033[%d;%dm", $style->getVariation(), $foreground->getValue());
         $back  = sprintf("\033[%dm", $background->getValue() + 10); // Constant
         
         return sprintf("%s%s%s\033[0m", $front, $back, $string);
