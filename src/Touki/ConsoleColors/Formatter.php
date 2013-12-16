@@ -29,6 +29,16 @@ class Formatter
     }
 
     /**
+     * Get Palette
+     *
+     * @return Palette
+     */
+    public function getPalette()
+    {
+        return $this->palette;
+    }
+
+    /**
      * Formats a string from a name given in palette
      *
      * @param string $string String to format
